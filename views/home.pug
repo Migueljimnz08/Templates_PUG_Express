@@ -1,0 +1,8 @@
+extends layout
+
+block content 
+    .searcher 
+        h1 Finder 
+        form#searchForm(action='/film' method="POST")
+            input(type="text" name="title" placeholder="Enter the title of the film" required)
+            button(type="submit") Search

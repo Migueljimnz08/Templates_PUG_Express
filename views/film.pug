@@ -1,0 +1,21 @@
+extends layout 
+
+block content 
+    .film
+        if error 
+            h1 = error a(href="/") Finder 
+        else 
+            h1= film.Title
+            if Poster !== "N/A"
+                img(src=film.Poster alt=film.Title)
+            p 
+                strong Director: 
+                | #{film.Director} 
+            p 
+                strong Year: 
+                | #{film.Year} 
+            p 
+                strong Plot: 
+                | #{film.Plot} 
+            a(href="/") Finder
+            
